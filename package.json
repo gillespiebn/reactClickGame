@@ -12,11 +12,12 @@
     "react-dom": "^16.3.0",
     "react-scripts": "1.1.1"
   },
-  "scripts": {
-    "prestart": "yarn build",
+  "scripts": {   
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   }
 }
