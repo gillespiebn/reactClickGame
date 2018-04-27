@@ -69,7 +69,7 @@ class Game extends Component {
     };
 
     render() {
-        return {
+        return (
             <div>
                 <Header />
                 {/* <ScoreBoard score={this.state.score} highestScore = {this.state.highestScore} /> */}
@@ -86,7 +86,7 @@ class Game extends Component {
                 </Wrapper>
                 <Footer />
             </div>
-        }
+        )
     }
 }
 
