@@ -36,7 +36,7 @@ class Game extends Component {
 
     resetCharacter= character => {
         const resetCharacter = character.map(item => ({...item, clicked: false}));
-        return.this.shuffleCharacter(resetCharacter);
+        return this.shuffleCharacter(resetCharacter);
     };
 
     shuffleCharacter = character => {
