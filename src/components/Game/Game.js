@@ -35,7 +35,7 @@ class Game extends Component {
     };
 
     resetCharacter= character => {
-        const resetCharacter = character.map(item => ({...item, clicked: false}));
+        const resetCharacter = character.map(character => ({...character, clicked: false}));
         return this.shuffleCharacter(resetCharacter);
     };
 
@@ -53,8 +53,8 @@ class Game extends Component {
 
     handleCharacterClick = id => {
       let   rightGuess = false;
-      const newCharacter = this.state.data.map(item => {
-          const newPicture = {...item};
+      const newCharacter = this.state.data.map(character => {
+          const newPicture = {...character};
           if (newPicture.id === id) {
               if (!newPicture.clicked) {
                   newPicture.clicked = true;
@@ -72,15 +72,15 @@ class Game extends Component {
         return (
             <div>
                 <Header />
-                {/* <ScoreBoard score={this.state.score} highestScore = {this.state.highestScore} /> */}
+                <ScoreBoard score={this.state.score} highestScore = {this.state.highestScore} />
                 <Wrapper>
-                    {this.state.character.map (item => (
+                    {this.state.character.map (character => (
                         <CharacterCard 
-                        key = {item.id}
-                        id = {item.id}
+                        key = {character.id}
+                        id = {character.id}
                         doSomething = {!this.state.score && this.state.highestScore}
                         handleClick = {this.state.handleCharacterClick}
-                        image = {item.image}
+                        image = {character.image}
                         />
                         ))}
                 </Wrapper>
