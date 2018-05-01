@@ -3,7 +3,9 @@ import CharacterCard from "../CharacterCard";
 import Footer from "../Footer";
 import Title from "../Title";
 import Wrapper from "../Wrapper";
-import Character from "../../character.json";
+import Header from "../Header";
+import ScoreBoard from "../ScoreBoard";
+import character from "../../character.json";
 
 class Game extends Component {
     state = {
